@@ -4,7 +4,8 @@
 To install the required packages:
 
 ```bash
-cd env && bash install_pkg.sh
+cd env
+bash install_pkg.sh
 ```
 
 ## Downstream Task Finetuning
@@ -26,5 +27,5 @@ cd env && bash install_pkg.sh
 
     horovodrun -np 8 python src/tasks/run_video_retrieval.py \ # GPU数量
         --config $CONFIG_PATH \
-        --output_dir /export/home/workspace/experiments/alpro/finetune/msrvtt_ret/$(date '+%Y%m%d%H%M%S')  # change to your local path to store finetuning ckpts and logs 
+        --output_dir alpro/finetune/msrvtt_ret/$(date '+%Y%m%d%H%M%S')
     ``` 
